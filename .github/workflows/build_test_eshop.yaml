@@ -35,7 +35,7 @@ jobs:
 
   Build:
     needs: Install
-    runs-on: Ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Git Checkout
@@ -71,7 +71,7 @@ jobs:
           restore-keys: ${{ runner.os }}-build-${{ github.run_id }}
   Test:
     needs: Install
-    runs-on: Ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Git Checkout
@@ -113,5 +113,3 @@ jobs:
             ./node_modules
             ./build
           key: ${{ runner.os }}-build-${{ github.run_id }}
-
-
